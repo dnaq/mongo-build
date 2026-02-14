@@ -5,7 +5,10 @@
   outputs = { self, nixpkgs }: {
 
     packages.aarch64-linux = 
-      let pkgs = nixpkgs.legacyPackages.aarch64-linux;
+      let pkgs = import nixpkgs {
+        system = "aarch64-linux";
+        config.allowUnfree = true;
+      };
       in rec {
         default = pkgs.mongodb-7_0;
       };
