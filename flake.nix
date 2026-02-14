@@ -7,7 +7,7 @@
     packages.aarch64-linux = 
       let pkgs = nixpkgs.legacyPackages.aarch64-linux;
       in rec {
-        default = pkgs.mongodb-4_4;
+        default = pkgs.mongodb-7_0;
       };
   };
 }
